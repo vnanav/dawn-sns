@@ -1,0 +1,370 @@
+// 共通レイアウト
+// app
+// header
+// aside
+
+// 個別レイアウト
+// index
+// register
+// login
+
+
+
+// 共通
+* {
+  // outline: 2px red solid;
+  background-color: white;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.user-icon {
+  img {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-position: left top;
+    border-radius: 50%;
+  }
+}
+.btn {
+  background-color: #3E4865;
+  border: 1px #3E4865 solid;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+  &:hover {
+    background-color: #5A659E;
+    border: 1px #5A659E solid;
+  }
+}
+
+// header
+.navbar {
+  background-color: #3E4865;
+  .container {
+    background-color: #3E4865;
+    max-width: 1500px;
+    .navbar-brand {
+      margin-left: 2%;
+      img {
+        background-color: #3E4865;
+        width: 120px;
+        height: 60px;
+      }
+    }
+    .navbar-toggler {
+      background: #3E4865;
+      outline: none;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      .navbar-toggler-icon {
+        background: #3E4865;
+        background-image: none;
+        background-image: url(../images/icons/menu.svg);
+        width: 27px;
+        height: 27px;
+      }
+    }
+    .show {
+      background-color: #3E4865;
+    }
+
+  }
+}
+
+
+
+
+
+// index
+.wrapper {
+  max-width: 1500px;
+  margin: auto;
+  // padding: 0 1.6%;
+  display: flex;
+  justify-content: space-around;
+  .left {
+    flex-grow: 1;//親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+    // flex-shrink: 2;//親要素に余りスペースがなく、子要素が入りきらな場合。
+    flex-basis: 78%;
+    width: auto;
+    .left-top {
+
+      display: flex;
+      border-bottom: 6px #D7D7D7 solid;
+      // margin-top: 10px;
+      .left-top-icon {
+        margin-left: 1.6%;
+        align-self: center;
+        img {
+
+        }
+      }
+      .left-top-post {
+        display: flex;
+        flex-grow: 1;//親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+        margin: 10px 0;
+        ::placeholder {
+          opacity: 0.5;
+        }
+        textarea {
+          flex-basis: 70%;
+          flex-grow: 1;//親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+          display: inline-block;
+          // width: 100%;
+          padding: 0 10px 0;
+          box-sizing: border-box;
+          margin: 0.5em 0;
+          line-height: 1.5;
+          height: 5em;
+          border: none;//枠線消す
+          resize: none;//右下の//(サイズ変更機能)を消す
+          outline: none;
+        }
+        .left-top-btn{
+          flex-basis: 30%;
+          flex-grow: 1;//親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+          align-self: flex-end;
+          cursor: pointer;
+          display: inline-block;
+          width: 41px;
+          height: 36px;
+          img{
+            display: inline-block;
+            width: 41px;
+            height: 36px;
+          }
+        }
+      }
+    }
+    .left-bottom {
+      display: flex;
+      margin-top: 25px;
+      border-bottom: 1px #D7D7D7 solid;
+      .left-bottom-left {
+        flex-grow: 0; //親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+        margin-left: 3.3%;
+        width: 55px;
+        img {
+
+        }
+      }
+
+      .left-bottom-center {
+        flex-grow: 1; //親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+        flex-basis: 70%;
+        margin-left: 25px;
+        .left-bottom-center-item {
+
+        }
+        .left-bottom-center-username {
+          font-size: 0.7rem;
+        }
+        .left-bottom-center-content {
+
+        }
+      }
+
+      .left-bottom-right {
+        text-align: right;
+        margin-right: 2.5%;
+        flex-grow: 1; //親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+        flex-basis: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .left-bottom-right-item {
+          display: flex;
+        }
+        .left-bottom-right-date {
+          align-self: flex-end;
+          flex-grow: 1; //親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+          text-align: right;
+        }
+        .left-bottom-right-icon {
+          flex-grow: 1; //親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+          align-self: flex-end;
+          text-align: right;
+          .left-bottom-right-icon-update {
+            margin-top: auto;
+            padding-right: 15px;
+            padding-bottom: 5px;
+            a {
+              img {
+              }
+            }
+          }
+          .left-bottom-right-icon-delete {
+            margin-top: auto;
+            form {
+              input {
+
+              }
+              .btn {
+                padding: 0;
+                border: none;
+                width: 55px;
+                height: 55px;
+                background: transparent;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                box-sizing: content-box;
+                img {
+                  box-sizing: content-box;
+                  outline: none;
+                  box-shadow: none;
+                  background-color: white;
+                  background: url('../images/icons/trash.png');
+                  display: inline-block;
+                  width: 55px;
+                  height: 55px;
+                  border-radius: 5px;
+                  border: none;
+                  &:hover {
+                    background: url('../images/icons/trash_h.png');
+                    border-radius: 5px;
+                    border: none;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+// aside
+  .right {
+    border-left: 1px #777777 solid;
+    flex-grow: 1;//親要素に余りスペースがある場合、他の子要素に対してどれくらいのびるか。
+    flex-basis: auto; //widthの幅。ahtoの場合、子要素のコンテンツのサイズ。
+    // flex-shrink: 1;　初期値のため。
+    width: auto;
+    max-width: none;
+    min-width: auto;
+    width: auto;
+    font-size: 0.8rem;
+    position: relative;
+    .navbar-collapse {
+      // background-color: #3E4865;
+      width: 100%;
+      color: #212529;
+      opacity: 0;
+      transition: opacity .3s linear;
+      .navbar-nav {
+          // background-color: #3E4865;
+          margin-right: 2%;
+          color: #212529;
+          top: 0;
+          left: 0;
+          right: 0;
+          position: absolute;
+          z-index: 100;
+          .nav-item {
+            color: #212529;
+            .nav-link {
+              color: #212529;
+              &:hover {
+                color: #FFF;
+                background-color: #D05E45;
+              }
+            }
+
+            .dropdown-manu {
+              .dropdonw-item {}
+
+              #logout-form {}
+            }
+
+          }
+        }
+      }
+      .show {
+        opacity: 1;
+        transition: opacity .3s linear;
+      }
+    .right-top {
+      border-bottom: 1px #D7D7D7 solid;
+      h2 {
+        margin-top: 10px;
+        margin-left: 5%;
+        font-size: 0.8rem;
+      }
+      .right-top-follows {
+
+      }
+      .right-top-follows-list {
+        display: flex;
+        margin: 0 10%;
+        .right-top-follows-item {
+          &:nth-child(2) {
+            margin-left: auto;
+          }
+        }
+      }
+      .right-top-follows-btn {
+        text-align: right;
+        margin-right: 10%;
+        margin-top: 10px;
+        a {
+          font-size: 0.8rem;
+        }
+      }
+      .right-top-followers {
+        .right-top-followers-list {
+          display: flex;
+          margin: 0 10%;
+          .right-top-followers-item {
+            &:nth-child(2) {
+              margin-left: auto;
+            }
+          }
+        }
+        .right-top-followers-btn {
+          text-align: right;
+          margin-right: 10%;
+          margin-top: 10px;
+          a {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    .right-bottom {
+      text-align: center;
+      margin-top: 30px;
+      a {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+
+// register
+.auth {
+  // height: 100%;
+  background: linear-gradient(#3E4865, #D05E45);
+  // background-color: pink;
+  .container {
+    background-color: transparent;
+    h1 {
+      background-color: transparent;
+      img {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+
+
+// login
